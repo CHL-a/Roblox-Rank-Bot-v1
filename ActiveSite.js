@@ -6,6 +6,9 @@ app.get("/", (request, response) => {
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
+
+console.log(process.env)
+
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
