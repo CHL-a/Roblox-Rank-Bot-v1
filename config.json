@@ -1,6 +1,6 @@
 
 {
-	"user_cookie": " * insert generic key here * ",
-	"auth_key": "THISWOULDBEYOURRANKDOMKEYTHATYOUCREATEDEARIERINTHETUTORIAL",
+	"user_cookie": " * insert generic cookie here * ",
+	"auth_key": " * insert generic auth key here * ",
 	"maximum_rank": 255
 }
