@@ -21,9 +21,11 @@ let BodyParser = require("body-parser");
 // Configs
 
 let config = require("./config.json"); // Stores configurations, such as login cookie
-config.user_cookie = process.env.userCookie
+config.user_cookie = process.env.userCookie // the environment absolutely must have this variable
+config.auth_key = process.env.authKey || config.auth_key // environment can have an authKey but defaults to the
+// auth key on config.json
 
-console.log(process.env);
+// console.log(process.env);
 
 // Modules
 
