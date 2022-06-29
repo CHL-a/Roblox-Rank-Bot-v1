@@ -25,8 +25,6 @@ config.user_cookie = process.env.userCookie // the environment absolutely must h
 config.auth_key = process.env.authKey || config.auth_key // environment can have an authKey but defaults to the
 // auth key on config.json
 
-// console.log(process.env);
-
 // Modules
 
 let Utility = require("./utility/functions.js"); // Module containing utility functions
@@ -55,8 +53,6 @@ app.post("/SetRank", SetRank(), Validate, function (req, res, next) {
     let Group = req.body.Group
     let Target = req.body.Target
     let Rank = req.body.Rank
-
-    console.log( `Met: ${Group}, ${Target}, ${Rank}` )
     
     Utility.SetRank(res, Group, Target, Rank) // Use the Utility.SetRank function to set the rank
         .catch(err => {
