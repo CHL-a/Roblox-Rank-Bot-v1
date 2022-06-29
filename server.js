@@ -56,6 +56,8 @@ app.post("/SetRank", SetRank(), Validate, function (req, res, next) {
     let Target = req.body.Target
     let Rank = req.body.Rank
 
+    console.log( `Met: ${Group}, ${Target}, ${Rank}` )
+    
     Utility.SetRank(res, Group, Target, Rank) // Use the Utility.SetRank function to set the rank
         .catch(err => {
             console.log(err);
